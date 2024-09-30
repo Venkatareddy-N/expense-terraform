@@ -83,6 +83,7 @@ module "records" {
       records = [
         module.mysql.private_ip
       ]
+      allow_overwrite = true
     },
     {
       name = "backend"
@@ -91,6 +92,7 @@ module "records" {
       records = [
         module.backend.private_ip
       ]
+      allow_overwrite = true
     },
     {
       name = "frontend"
@@ -99,6 +101,7 @@ module "records" {
       records = [
         module.frontend.private_ip
       ]
+      allow_overwrite = true
     },
     {
       name = ""
@@ -107,6 +110,7 @@ module "records" {
       records = [
         module.frontend.public_ip
       ]
+      allow_overwrite = true
     }
   ]
 }
